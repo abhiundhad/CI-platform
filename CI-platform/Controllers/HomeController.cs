@@ -38,6 +38,14 @@ namespace CI_platform.Controllers
         {
             return View();
         }
+        public IActionResult landingpage()
+        {
+            return View();
+        }
+        public IActionResult nomission()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
