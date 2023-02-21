@@ -23,6 +23,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=nomission}/{id?}");
+    pattern: "{controller=Home}/{action=login}/{id?}");
 
 app.Run();
