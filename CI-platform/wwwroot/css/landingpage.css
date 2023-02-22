@@ -45,10 +45,9 @@
 
 
 hr {
-    flex: 1;
+  
     border: 1px solid grey;
-    height: 2px;
-    background: black;
+   
 }
 
 .date-btn {

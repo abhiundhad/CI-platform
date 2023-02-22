@@ -11,13 +11,191 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+      <link rel="stylesheet" href="~/css/Mission.css" />
+
     </head>
     <body>
-    <div class="container">
-        
+    <div class="container  missioncontainer">
+        <div class="row">
+            <div class="leftdiv  col-12 col-lg-6 col-md-12 col-sm-12 ">
+
+                <div class="container p-0">
+
+                    <!-- Full-width images with number text -->
+                    <div class="mySlides">
+                        @*<div class="numbertext">1 / 6</div>*@
+                        <img src="~/images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        @*<div class="numbertext">2 / 6</div>*@
+                        <img src="~/images/img1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        @*<div class="numbertext">3 / 6</div>*@
+                        <img src="~/images/Grow-Trees-On-the-path-to-environment-sustainability-2.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        @*<div class="numbertext">4 / 6</div>*@
+                        <img src="~/images/img11.png" style="width:100%">
+                    </div>
+
+@*                    <div class="mySlides">
+                        @*<div class="numbertext">5 / 6</div>
+                        <img src ="~/images/img22.png"  style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        @*<div class="numbertext">6 / 6</div>*@
+                     @*   <img src="~/images/img.png" style="width:100%">
+                    </div>*@
+
+                    <!-- Next and previous buttons -->
 
 
+                 
+
+                    <!-- Thumbnail images -->
+                    <div class="row mt-2">
+
+                        <a class="prev " onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div class="column" style="width:25%">
+                            <img class="demo cursor" src="~/images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                        </div>
+                        <div class="column" style="width:25%">
+                            <img class="demo cursor" src="~/images/img1.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                        </div>
+                        <div class="column" style="width:25%">
+                            <img class="demo cursor" src="~/images/Grow-Trees-On-the-path-to-environment-sustainability-1.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                        </div>
+                        <div class="column" style="width:25%">
+                            <img class="demo cursor" src="~/images/img11.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                        </div>
+                       @* <div class="column">
+                            <img class="demo cursor" src="~/images/img22.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="~/images/img.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                        </div>*@
+                    </div>
+                </div>
+
+
+        </div>
+        <div class="rightdiv  col-12 col-lg-6 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> CSR initiative stands for Coffee & Farmer Equity</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</h6>
+                      @*  <p class="card-text"></p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>*@
+
+                        <div class=" col-12 rule d-flex mt-1">
+                            <hr>
+                            <div class="goal col-4 rounded-5  text-center " >
+                                plant 10000 tress
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="d-flex  mt-1">
+                            <div class="d-flex me-auto  col-6">
+                                <img src="~/images/Seats-left.png" alt="" class="mt-1 ms-1">
+                                <div class="ms-4 ">
+                                    <fs-2>10</fs-2><br>
+                                    <fs-5> seats left</fs-5>
+                                </div>
+                            </div>
+                            <div class="d-flex col-6">
+                                <img src="~/images/deadline.png" alt="" class="mt-1 ms-1">
+                                <div class="ms-3 ">
+                                    <fs-2>09/01/2019</fs-2><br>
+                                    <fs-5>Deadline</fs-5>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <hr  class=""/>
+
+                        
+
+                        <div class="row">
+                        <div class="col  col-12  col-xl-5 col-lg-12 col-md-5 col-sm-12  me-xl-4  me-md-4 rounded-5 d-flex mt-3  Addfavourite   justify-content-center">
+                                <div><img src="~/images/heart1.png" /></div>
+                                <lable class="ms-2">ADD to Favourite</lable>
+                                
+                            </div>
+                            <div class="col col-12 col-xl-6 col-lg-12  col-md-6 col-sm-12 rounded-5 d-flex  mt-3 Addfavourite  justify-content-center">
+                                <div><img src="~/images/add1.png"  /></div>
+                               
+                                <lable class="ms-2" > Recommend to a Co-Worker</lable>
+                            </div>
+
+                            </div>
+                            <div class=" row mt-3">
+                                <div class="col-12 Ratting d-flex">
+                                    <hr />
+                                    <img src="~/images/star-empty.png" alt="" />
+                                <img src="~/images/star-empty.png" alt="" />
+                                <img src="~/images/star-empty.png" alt="" />
+                                <img src="~/images/star-empty.png" alt="" />
+                                <img src="~/images/star-empty.png" alt="" />
+                                    <hr />
+                                </div>
+
+                            </div>
+                            <div class="row justify-content-center justify-content-between mt-3">
+                            <div class="col col-5  col-md-2 col-sm-5  ms-2 me-2 rounded-1 foursquer ">
+                                    <img src="~/images/pin1.png" alt=" " class="" />
+                                    <br />
+                                  <label class="text-muted mt-4">city</label>
+                                    <label class=""> London</label>
+
+                                    </div>
+                            <div class="col col-5 col-md-2  col-sm-5 me-2 rounded-1 foursquer">
+                                <img src="~/images/web.png" alt=" " class="" />
+                                <br />
+                                <label class="text-muted mt-4">city</label>
+                                <label class=""> London</label>
+                            </div>
+                            <div class="col col-5 col-md-2  col-sm-5  me-2 mt-sm-2 rounded-1 foursquer">
+                                <img src="~/images/calender.png" alt=" " class="" />
+                                <br />
+                                <label class="text-muted mt-4">city</label>
+                                <label class=""> London</label>
+                            </div>
+                            <div class="col col-5 col-md-2  col-sm-5 me-2  mt-sm-2 rounded-1 foursquer">
+                                <img src="~/images/organization.png" alt=" " class="" />
+                                     <br />
+                                  <label class="text-muted mt-4">city</label>
+                                    <label class=""> London</label>
+                            </div>
+                           
+
+                                </div>
+
+
+
+
+
+
+
+                    </div>
+                    </div>
+                </div>
+
+
+
+
+        </div>
+        </div>
+        </div>
+
+        <script src="~/js/Missionpage.js"></script>
     </body>
     </html>
 
-<partial name="_relatedmission_partial"/>
+@*<partial name="_relatedmission_partial"/>*@
