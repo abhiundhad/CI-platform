@@ -1,9 +1,4 @@
-﻿.leftdiv {
- 
-}
-.rightdiv {
- 
-}
+﻿
 .missioncontainer{
     margin-top:110px;
 }
@@ -140,12 +135,23 @@ hr {
     padding-top:5px;
     padding-bottom:5px;
 }
-hr {
+.trees {
     margin: 1rem 0;
-    
-    background-color: black!important;
+    background-color: black !important;
     border: 2px !important;
     opacity: .25;
     width: 100% !important;
+}
+.aply {
+    border: 1px solid #F88634 !important;
+}
+
+.aplys{
+    color: #F88634 !important;
+}
+.involveduserprofile {
+    border-radius: 50px;
+    height: 55%;
+    width: 90%;
 }
 }
