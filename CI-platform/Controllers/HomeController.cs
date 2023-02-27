@@ -1,4 +1,5 @@
-﻿using CI_platform.Models;
+﻿using CI_platform.Data;
+using CI_platform.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,10 +8,12 @@ namespace CI_platform.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly CiPlatformContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, CiPlatformContext db)
         {
             _logger = logger;
+            _db = db;
         }
 
         public IActionResult Index()
@@ -22,11 +25,49 @@ namespace CI_platform.Controllers
         {
             return View();
         }
+
+        [Route("/login")]
         public IActionResult login()
         {
             return View();
         }
-        public IActionResult forgot()
+
+        [HttpPost]
+		[Route("/login")]
+		public IActionResult login(User obj)
+		{
+			if (obj.Email == null)
+			{
+				ModelState.AddModelError("Email", "Email Is required!");
+				return View();
+			}
+			if (obj.Password == null)
+			{
+				ModelState.AddModelError("Password", "Password Is required!");
+				return View();
+			}
+			User user = _db.Users.FirstOrDefault(u => u.Email == obj.Email);
+			if (user != null)
+			{
+				if (user.Password == obj.Password)
+				{
+					return RedirectToAction("landingpage");
+				}
+				else
+				{
+					ModelState.AddModelError("Password", "Password does not match!");
+					return View();
+				}
+			}
+			else
+			{
+				ModelState.AddModelError("Email", "User Not found!");
+				return View();
+			}
+			return View();
+		}
+
+		public IActionResult forgot()
         {
             return View();
         }
@@ -34,11 +75,54 @@ namespace CI_platform.Controllers
         {
             return View();
         }
-        public IActionResult register()
+
+		[Route("/register")]
+		public IActionResult register()
         {
             return View();
         }
-        public IActionResult landingpage()
+
+		[HttpPost]
+		[Route("/register")]
+		public IActionResult Register(User obj)
+		{
+			if (obj.FirstName == null)
+			{
+				ModelState.AddModelError("FirstName", "FirstName Is required!");
+				return View();
+			}
+			if (obj.LastName == null)
+			{
+				ModelState.AddModelError("LastName", "LastName Is required!");
+				return View();
+			}
+			if (obj.Email == null)
+			{
+				ModelState.AddModelError("Email", "Email Is required!");
+				return View();
+			}
+			if (obj.Password == null)
+			{
+				ModelState.AddModelError("Password", "Password Is required!");
+				return View();
+			}
+			//if (obj.Password == obj.Password1)
+			//{
+			//    ModelState.AddModelError("Password", "Password Is required!");
+			//    return View();
+			//}
+
+			User user = _db.Users.FirstOrDefault(u => u.Email == obj.Email);
+			if (user != null)
+			{
+				ModelState.AddModelError("Email", "Email Already Registerd!");
+				return View();
+			}
+			_db.Users.Add(obj);
+			_db.SaveChanges();
+			return RedirectToAction("landingpage");
+		}
+		public IActionResult landingpage()
         {
             return View();
         }

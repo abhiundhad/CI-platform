@@ -1,3 +1,5 @@
+@model User;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,36 +64,41 @@
             <div class=" sidediv col-lg-4 col-md-12 col-sm-12 col-xs-11  align-self-center">
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                    <form >
+                    <form method="POST">
                         <div class="mb-3 mt-3 ">
-                            <label for="fristname" class="form-label">Frist Name</label>
-                            <input type="text" class="form-control" placeholder="First name" aria-label="First name" value="evan">
-                          </div>
+                                <label for="fristname" class="form-label" asp-for="FirstName">Frist Name</label>
+                                <input type="text" class="form-control" placeholder="First name" aria-label="First name" asp-for="FirstName">
+                                <span class="text-danger" asp-validation-for="FirstName"></span>
+                            </div>
 
                           <div class="mb-3 mt-1 ">
-                            <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" value="donohue">
+                                <label for="exampleInputEmail1" class="form-label" asp-for="LastName">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" asp-for="LastName">
+                                <span class="text-danger" asp-validation-for="LastName"></span>
                           </div>   
 
                         <div class="mb-3 mt-1 ">
-                          <label for="phoneno" class="form-label">Phone Number</label>
-                          <input type="tel" class="form-control" id="phone" value="156484156864894" placeholder="phonenumber">
+                                <label for="phoneno" class="form-label" asp-for="PhoneNumber">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="phonenumber" asp-for="PhoneNumber">
+                                <span class="text-danger" asp-validation-for="PhoneNumber"></span>
                         </div>
 
                         <div class="mb-3 mt-1 ">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="evan.donohue@gmail.com">
+                                <label for="exampleInputEmail1" class="form-label" asp-for="Email">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="evan.donohue@gmail.com" asp-for="Email">
+                                <span class="text-danger" asp-validation-for="Email"></span>
                             
                           </div>
 
                         <div class="mb-3 mt-1">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" value="*******" placeholder="Enter Password"> 
-                        </div>
+                                <label for="exampleInputPassword1" class="form-label" asp-for="Password">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" asp-for="Password">
+                                <span class="text-danger" asp-validation-for="Password"></span>
+                            </div>
                                  
                           <div class="mb-3 mt-2">
                             <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword2" value="*******" placeholder="Enter Password">
+                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Enter Password">
                         </div>
                         <div class=" ">
                             <button type="submit" class="btn mt-3">Register</button>
