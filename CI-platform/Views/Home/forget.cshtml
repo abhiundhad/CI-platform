@@ -1,3 +1,5 @@
+@using CI_platform.Models;
+@model User;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +62,7 @@
             <div class=" sidediv col-lg-4 col-md-12 col-sm-12 col-xs-11  align-self-center">
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 secdiv">
-                    <form >
+                        <form asp-controller="Forget" asp-action="forget" >
                         <p class="fs-5 text-center forget ">Forgot Password</p>
                         <div class="text-center">
                             <p class=" para">Enter your email address you've using for your account below and we will send you a password reset link</p>
@@ -68,8 +70,8 @@
                         </div>
                         
                         <div class="mb-3 mt-3 ">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
+                                <label asp-for="Email" for=" exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address" asp-for="Email">
                           
                         </div>
                         

@@ -8,14 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Home\forgot.cshtml" />
     <Content Remove="Views\Home\login.cshtml" />
     <Content Remove="Views\Home\newpassword.cshtml" />
     <Content Remove="Views\Home\register.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Home\forgot.cshtml" />
     <None Include="Views\Home\login.cshtml" />
     <None Include="Views\Home\newpassword.cshtml" />
     <None Include="Views\Home\register.cshtml" />

@@ -67,7 +67,7 @@ namespace CI_platform.Controllers
 			return View();
 		}
 
-		public IActionResult forgot()
+		public IActionResult forget()
         {
             return View();
         }
@@ -120,7 +120,7 @@ namespace CI_platform.Controllers
 			}
 			_db.Users.Add(obj);
 			_db.SaveChanges();
-			return RedirectToAction("landingpage");
+			return RedirectToAction("login");
 		}
 		public IActionResult landingpage()
         {
